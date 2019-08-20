@@ -6,7 +6,7 @@ class EquinoxCrmContactTest < Minitest::Test
   end
 
   def test_it_gives_back_a_single_contact
-    @client = EquinoxCrm::Client.new("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx")
+    @client = EquinoxCrm::Client.new("pputvb82KcaD2qgdOsLX7g")
     contact = @client.contacts(35)["contact"]
 
     assert_equal Hash, contact.class
@@ -26,19 +26,19 @@ class EquinoxCrmContactTest < Minitest::Test
   end
 
   def test_it_gives_back_a_all_contact
-    @client = EquinoxCrm::Client.new("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx")
+    @client = EquinoxCrm::Client.new("pputvb82KcaD2qgdOsLX7g")
     results = @client.contacts_list["contacts"]
     assert results.kind_of?(Array)
   end
 
   def test_it_with_limit_param
-    @client = EquinoxCrm::Client.new("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx")
+    @client = EquinoxCrm::Client.new("pputvb82KcaD2qgdOsLX7g")
     results = @client.contacts_list(limit: 5)["contacts"]
     assert_equal 5, results.length
   end
 
   def test_it_with_page_number
-    @client = EquinoxCrm::Client.new("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx")
+    @client = EquinoxCrm::Client.new("pputvb82KcaD2qgdOsLX7g")
     results = @client.contacts_list(page: 2)["page_details"]
     assert_equal 2, results['current_page']
   end

@@ -3,7 +3,7 @@ require 'json'
 
 API_URL = "http://203.193.173.114:4000/api/public_access/contacts"
 
-module Contact
+module CrmContact
 
   def find(id)
     response = request(

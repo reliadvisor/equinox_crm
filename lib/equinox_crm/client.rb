@@ -5,7 +5,7 @@ require 'active_support/core_ext'
 
 module EquinoxCrm
   class Client
-    include Contact
+    include CrmContact
     attr_reader :oauth_token
 
     def initialize(oauth_token = nil)
