@@ -24,21 +24,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
 To fetch a specific contact
 
-@client = EquinoxCrm::Client.new('YOUR_API_KEY')
-@client.contacts('ID')
+    @client = EquinoxCrm::Client.new('YOUR_API_KEY')
+    @client.contacts('ID')
 
 To fetch list of contacts
 
-@client = EquinoxCrm::Client.new('YOUR_API_KEY')
-@client.contacts_list
+    @client = EquinoxCrm::Client.new('YOUR_API_KEY')
+    @client.contacts_list
 
 Default limit is 10 records. To fect more or less 10 records user limit param
 
-@client.contacts_list(limit: 20)
+    @client.contacts_list(limit: 20)
 
 If the result contains next_page attribute is null means list is over.
 
